@@ -367,7 +367,11 @@ def object_main():
         image_file = st.file_uploader("Upload Image", type=['jpg','png','jpeg'])
 
         if image_file is not None:
+<<<<<<< HEAD
             # image_file=os.path.join(os.path.dirname( __file__ ),image_file)
+=======
+#             image_file=os.path.join(os.path.dirname( __file__ ),image_file)
+>>>>>>> 1893e9d8d523eb830c727fa343ae22af1e923e25
             our_image = Image.open(image_file)  
             st.info('Image uploaded')
             
