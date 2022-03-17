@@ -2,6 +2,16 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.streamlit
+style.css
+navbar.html
+myvenv/
+person.jpg
+test.py
+testfile.py
+favicon.png
+cov_yolov4_best.weights6knl6tbg.tmp
+cov_yolov4_best.weights
 
 # C extensions
 *.so
