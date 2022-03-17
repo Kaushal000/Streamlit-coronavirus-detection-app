@@ -167,8 +167,8 @@ def detect_objects(our_image):
 def object_main():
     """OBJECT DETECTION APP"""
     #Favicon
-    favpath=os.path.abspath(os.path.join(os.path.dirname( __file__ ), '.', 'images','icons8-coronavirus-16.png'))
-    img1=Image.open(PurePosixPath(favpath).name)
+    favpath=os.path.join(os.path.dirname( __file__ ),'images','icons8-coronavirus-16.png')
+    img1=Image.open(favpath)
     
     path=os.path.abspath(os.path.join(os.path.dirname( __file__ ), '.', 'images','coronavirus.jpg'))
     
