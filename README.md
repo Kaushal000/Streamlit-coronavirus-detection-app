@@ -24,7 +24,7 @@ After building the image run the image on a container by typing `docker run -p 8
 
 To run it in background type `docker run -p 8501:8501 -d streamlit-coronavirus-detection-app:latest`
 
-##Live app deployed on streamlit##
+## Live app deployed on streamlit
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/kaushal000/streamlit-coronavirus-detection-app/main/src/app.py)
 
 ![plot](./src/images/coronavirus.jpg)
