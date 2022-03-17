@@ -27,5 +27,4 @@ To run it in background type `docker run -p 8501:8501 -d streamlit-coronavirus-d
 ##Live app deployed on streamlit##
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/kaushal000/streamlit-coronavirus-detection-app/main/src/app.py)
 
-##docker container deployed on heroku 
-
+![plot](./src/images/coronavirus.jpg)
