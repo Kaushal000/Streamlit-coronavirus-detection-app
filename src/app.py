@@ -9,7 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 import tempfile
-
+from pathlib import PurePosixPath
 
 def detect_objects(our_image):
     
@@ -32,14 +32,14 @@ def detect_objects(our_image):
     class_colors = np.array(class_colors)
     class_colors = np.tile(class_colors,(1,1))
 
-    cfgpath=os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'src\model','cov_yolov4.cfg'))
-    modelpath=os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'src\model','cov_yolov4_best.weights'))
+    cfgpath=PurePosixPath(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '.', 'model','cov_yolov4.cfg'))).name
+    modelpath=PurePosixPath(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '.', 'model','cov_yolov4_best.weights'))).name
 
     if not os.path.exists(modelpath):
-        loc=os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'src\model'))
+        loc=PurePosixPath(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '.', 'model'))).name
         d=downloader()
         
-        with st.spinner('Downloading weights...'):
+        with st.spinner('Downloading weights..'):
             d.downloadFile("https://dl.dropbox.com/s/909wlai4r3y4uz1/cov_yolov4_best.weights?dl=1",loc)
     
     # Loading the coronavirus custom model 
@@ -167,16 +167,16 @@ def detect_objects(our_image):
 def object_main():
     """OBJECT DETECTION APP"""
     #Favicon
-    # favpath=os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'src\images','icons8-coronavirus-16.png'))
-    # img1=Image.open(favpath)
+    favpath=os.path.abspath(os.path.join(os.path.dirname( __file__ ), '.', 'images','icons8-coronavirus-16.png'))
+    img1=Image.open(PurePosixPath(favpath).name)
     
-    path=os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'src\images','coronavirus.jpg'))
+    path=os.path.abspath(os.path.join(os.path.dirname( __file__ ), '.', 'images','coronavirus.jpg'))
     
     
     #st.set_page_config(layout='wide')
-    # st.set_page_config(layout='wide',page_title='Object detection',page_icon=img1,initial_sidebar_state = 'auto')
+    st.set_page_config(layout='wide',page_title='Object detection',page_icon=img1,initial_sidebar_state = 'auto')
     #components.iframe("https://docs.streamlit.io/en/latest")
-    st.set_page_config(layout='wide',page_title='Object detection',initial_sidebar_state = 'auto')
+    # st.set_page_config(layout='wide',page_title='Object detection',initial_sidebar_state = 'auto')
     hide_streamlit_style = """
             <style>
             footer {visibility: hidden;}
@@ -357,9 +357,9 @@ def object_main():
     st.title("Object Detection")
     st.write("Object detection is a central algorithm in computer vision. The algorithm implemented below is YOLO (You Only Look Once), a state-of-the-art algorithm trained to identify thousands of objects types. It extracts objects from images and identifies them using OpenCV and Yolo. This task involves Deep Neural Networks(DNN), yolo trained model, yolo configuration and a dataset to detect objects.")
 
-    # choice = st.radio("", ("Show Demo", "Browse an Image" ,"Upload video"))
+    choice = st.radio("", ("Show Demo", "Browse an Image" ,"Upload video"))
     
-    choice = st.radio("", ("Browse an Image" ,"Upload video"))
+    # choice = st.radio("", ("Browse an Image" ,"Upload video"))
     st.write()
 
     if choice == "Browse an Image":
@@ -370,7 +370,7 @@ def object_main():
             our_image = Image.open(image_file)  
             st.info('Image uploaded')
             
-            with st.spinner('Detecting objects and generating confidence scores...'):
+            with st.spinner('Detecting objects and generating confidence scores..'):
                 time.sleep(5)
                 detect_objects(our_image)
      
@@ -399,9 +399,10 @@ def object_main():
 
        
 
-    # else :
-    #     our_image = Image.open('coronavirus.jpg')
-    #     detect_objects(our_image)
+    else :
+        iloc=PurePosixPath(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '.', 'images','coronavirus.jpg')))
+        our_image = Image.open(iloc.name)
+        detect_objects(our_image)
 # embed streamlit docs in a streamlit app
 
 
