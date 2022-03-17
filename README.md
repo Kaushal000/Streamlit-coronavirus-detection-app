@@ -3,7 +3,7 @@
 [![Deploy to heroku.](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/actions/workflows/main.yml/badge.svg)](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/actions/workflows/main.yml)
 &nbsp;[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 &nbsp;[![PyPI - Wheel](https://img.shields.io/pypi/wheel/streamlit)](https://streamlit.io/)
-[![Heroku CI Status](https://{secrets.HEROKU_APP_NAME}.herokuapp.com/last.svg)](https://dashboard.heroku.com/pipelines/{secrets.HEROKU_CI_TOKEN}/tests)
+[![Heroku CI Status](https://{secrets.HEROKU_APP_NAME}.herokuapp.com/last.svg)](https://dashboard.heroku.com/pipelines/{secrets.HEROKU_CI_TOKEN})
 
 <br><br>[![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/repository/docker/kdocker03/streamlit-coronavirus-detection-app/general)
 
