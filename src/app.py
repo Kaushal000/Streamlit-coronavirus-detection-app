@@ -167,14 +167,14 @@ def detect_objects(our_image):
 def object_main():
     """OBJECT DETECTION APP"""
     #Favicon
-    favpath=os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'src\images','icons8-coronavirus-16.png'))
-    img1=Image.open(favpath)
+    # favpath=os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'src\images','icons8-coronavirus-16.png'))
+    # img1=Image.open(favpath)
     
     path=os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'src\images','coronavirus.jpg'))
     
     
     #st.set_page_config(layout='wide')
-    st.set_page_config(layout='wide',page_title='Object detection',page_icon=img1,initial_sidebar_state = 'auto')
+    # st.set_page_config(layout='wide',page_title='Object detection',page_icon=img1,initial_sidebar_state = 'auto')
     #components.iframe("https://docs.streamlit.io/en/latest")
     hide_streamlit_style = """
             <style>
