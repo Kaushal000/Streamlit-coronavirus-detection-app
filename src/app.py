@@ -397,7 +397,7 @@ def object_main():
        
 
     else :
-        our_image = Image.open(path)
+        our_image = Image.open('coronavirus.jpg')
         detect_objects(our_image)
 # embed streamlit docs in a streamlit app
 
