@@ -20,10 +20,10 @@ jobs:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         run: | 
           cd ./src
-          heroku container:push -a streamlit-github web
+          heroku container:push web --app streamlit-github
       - name: Release
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
          run: |
           cd ./src 
-          heroku container:release -a streamlit-github web
+          heroku container:release web --app streamlit-github 
