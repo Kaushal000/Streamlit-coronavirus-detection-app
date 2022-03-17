@@ -11,15 +11,19 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Login to Heroku Container registry
-        working-directory: ./src
+        # working-directory: ./src
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         run: heroku container:login
       - name: Build and push
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        run: heroku container:push -a streamlit-github web
+        run: | 
+          cd ./src
+          heroku container:push -a streamlit-github web
       - name: Release
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        run: heroku container:release -a streamlit-github web
+         run: |
+          cd ./src 
+          heroku container:release -a streamlit-github web
