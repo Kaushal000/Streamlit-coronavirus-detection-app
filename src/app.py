@@ -176,6 +176,7 @@ def object_main():
     #st.set_page_config(layout='wide')
     # st.set_page_config(layout='wide',page_title='Object detection',page_icon=img1,initial_sidebar_state = 'auto')
     #components.iframe("https://docs.streamlit.io/en/latest")
+    st.set_page_config(layout='wide',page_title='Object detection',initial_sidebar_state = 'auto')
     hide_streamlit_style = """
             <style>
             footer {visibility: hidden;}
@@ -356,7 +357,9 @@ def object_main():
     st.title("Object Detection")
     st.write("Object detection is a central algorithm in computer vision. The algorithm implemented below is YOLO (You Only Look Once), a state-of-the-art algorithm trained to identify thousands of objects types. It extracts objects from images and identifies them using OpenCV and Yolo. This task involves Deep Neural Networks(DNN), yolo trained model, yolo configuration and a dataset to detect objects.")
 
-    choice = st.radio("", ("Show Demo", "Browse an Image" ,"Upload video"))
+    # choice = st.radio("", ("Show Demo", "Browse an Image" ,"Upload video"))
+    
+    choice = st.radio("", ("Browse an Image" ,"Upload video"))
     st.write()
 
     if choice == "Browse an Image":
@@ -396,9 +399,9 @@ def object_main():
 
        
 
-    else :
-        our_image = Image.open('coronavirus.jpg')
-        detect_objects(our_image)
+    # else :
+    #     our_image = Image.open('coronavirus.jpg')
+    #     detect_objects(our_image)
 # embed streamlit docs in a streamlit app
 
 
