@@ -400,8 +400,8 @@ def object_main():
        
 
     else :
-        iloc=PurePosixPath(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '.', 'images','coronavirus.jpg')))
-        our_image = Image.open(iloc.name)
+        iloc=os.path.join(os.path.dirname( __file__ ), 'images','coronavirus.jpg')
+        our_image = Image.open(iloc)
         detect_objects(our_image)
 # embed streamlit docs in a streamlit app
 
