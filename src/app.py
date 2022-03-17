@@ -32,11 +32,11 @@ def detect_objects(our_image):
     class_colors = np.array(class_colors)
     class_colors = np.tile(class_colors,(1,1))
 
-    cfgpath=PurePosixPath(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '.', 'model','cov_yolov4.cfg'))).name
-    modelpath=PurePosixPath(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '.', 'model','cov_yolov4_best.weights'))).name
+    cfgpath=os.path.join(os.path.dirname( __file__ ),'model','cov_yolov4.cfg')
+    modelpath=os.path.join(os.path.dirname( __file__ ),'model','cov_yolov4_best.weights')
 
     if not os.path.exists(modelpath):
-        loc=PurePosixPath(os.path.abspath(os.path.join(os.path.dirname( __file__ ), '.', 'model'))).name
+        loc=os.path.join(os.path.dirname( __file__ ),'model')
         d=downloader()
         
         with st.spinner('Downloading weights..'):
