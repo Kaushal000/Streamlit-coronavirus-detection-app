@@ -1,4 +1,7 @@
 # Streamlit-coronavirus-detection-app
+
+[![Deploy to heroku.](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/actions/workflows/main.yml/badge.svg)](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/actions/workflows/main.yml)
+
 A streamlit app to detect coronaviruses from gray scaled electron microscopic images as well as gray scaled video. 
 
 ##To run the app locally git clone the repository and cd into Streamlit-coronavirus-detection-app##
