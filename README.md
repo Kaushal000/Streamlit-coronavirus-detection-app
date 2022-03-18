@@ -4,7 +4,7 @@
 &nbsp;[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 &nbsp;[![PyPI - Wheel](https://img.shields.io/pypi/wheel/streamlit)](https://streamlit.io/)
 [![Heroku](https://heroku-badge.herokuapp.com/?app=streamlit-github)](https://streamlit-github.herokuapp.com/)
-<br><br>[![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/repository/docker/kdocker03/streamlit-coronavirus-detection-app/general)
+<br><br>[![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/repository/docker/kdocker03/streamlit-coronavirus-detection-app/general)&nbsp;[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/kaushal000/streamlit-coronavirus-detection-app/main/src/app.py)
 
 
 A streamlit app to detect coronaviruses from gray scaled electron microscopic images as well as gray scaled video. 
@@ -26,7 +26,7 @@ After building the image run the image on a container by typing `docker run -p 8
 
 To run it in background type `docker run -p 8501:8501 -d streamlit-coronavirus-detection-app:latest`
 
-## Live app deployed on streamlit
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/kaushal000/streamlit-coronavirus-detection-app/main/src/app.py)
+
+
 
 
