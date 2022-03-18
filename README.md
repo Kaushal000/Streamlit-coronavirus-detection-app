@@ -5,6 +5,7 @@
 &nbsp;[![PyPI - Wheel](https://img.shields.io/pypi/wheel/streamlit)](https://streamlit.io/)
 [![Heroku](https://heroku-badge.herokuapp.com/?app=streamlit-github)](https://streamlit-github.herokuapp.com/)
 <br><br>[![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/repository/docker/kdocker03/streamlit-coronavirus-detection-app/general)&nbsp;[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/kaushal000/streamlit-coronavirus-detection-app/main/src/app.py)
+&nbsp;[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Kaushal000/Streamlit-coronavirus-detection-app/blob/main/Coronavirus_detection_model_training.ipynb)
 
 
 A streamlit app to detect coronaviruses from gray scaled electron microscopic images as well as gray scaled video. 
