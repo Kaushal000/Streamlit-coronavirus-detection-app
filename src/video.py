@@ -1,3 +1,4 @@
+#An utitlity app to detect coronavirus from images. Can be run as standalone
 
 import streamlit as st
 import cv2 
