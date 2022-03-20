@@ -14,7 +14,7 @@ A streamlit app to detect coronaviruses from gray scaled electron microscopic im
 ## To run the app locally git clone the repository and cd into Streamlit-coronavirus-detection-app
 
 Install the dependencies by typing the command below in the terminal
-`pip install -r requirements.txt`
+<br>`pip install -r requirements.txt`
 
 Then run streamlit app by typing `streamlit run src/app.py`
 
