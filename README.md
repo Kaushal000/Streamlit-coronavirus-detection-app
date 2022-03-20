@@ -30,7 +30,7 @@ To run it in background type `docker run -p 8501:8501 -d streamlit-coronavirus-d
 
 ## Live demo :point_down: 
 <br>
-![Demo](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/main/Demo.gif)
+![plot](./Demo.gif)
 
 
 
