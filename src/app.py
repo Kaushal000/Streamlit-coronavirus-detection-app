@@ -345,9 +345,9 @@ def object_main():
     st.markdown("""
     <nav class="navbar">
 		<a href="#">Home</a>
-		<a href="#">Menu</a>
+		<a href="#">PPT</a>
 		<a href="#" class="current">Gallery</a>
-		<a href="#">About</a>
+		<a href="#">Training</a>
 		<a href="#">Contact</a>
 		<div class="nav-underline"></div>
 		<div class="nav-underline2"></div>
