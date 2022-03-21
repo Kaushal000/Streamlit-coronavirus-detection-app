@@ -19,7 +19,8 @@ A streamlit app to detect coronaviruses from gray scaled electron microscopic im
     - [Build docker image](#to-run-the-app-on-docker-change-the-directory-to-src-if-not-already)
     - [Pull docker image](#alternatively-you-can-download-the-already-prebuilt-docker-image-by-either-of-the-two-way )
 * [Live demo](#live-demo)
-    - [Uploading and detecting coronaviruses from image](#uploading-image-and-detect-coronaviruses-from-the-image) 
+    - [Uploading and detecting coronaviruses from image](#uploading-image-and-detect-coronaviruses-from-the-image-)
+    - [Uploading video and detecting coronaviruses from the uploaded video](#for-video-) 
 * [Downloading weights](#downloading-trained-weights)
 * [Mean average prediction chart](#mean-average-prediction-chart)
 
@@ -86,10 +87,10 @@ docker pull kdocker03/streamlit-coronavirus-detection-app
 
 ## Live demo
 
-### uploading image and detect coronaviruses from the image 
+### Uploading image and detect coronaviruses from the image :camera:  
 ![Image](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/main/Demo.gif)
 
-### For video 🧪
+### For video :video_camera:
 ![Video](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/main/Demovideo.gif)
 
 
