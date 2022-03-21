@@ -50,7 +50,10 @@ To build the image type
 ```bash
 docker image build -t streamlit-coronavirus-detection-app:latest`
 ```
-## After building the image run the image on a container by typing ### `docker run -p 8501:8501 streamlit-coronavirus-detection-app:latest`
+## After building the image run the image on a container 
+```bash
+docker run -p 8501:8501 streamlit-coronavirus-detection-app:latest
+```
 
 To run it in background type 
 ```bash
