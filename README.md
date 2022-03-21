@@ -52,7 +52,7 @@ On running the app it will automatically open your default browser and the app w
 localhost:8501
 ```
 
-##To run the app on docker change the directory to src if not already
+**To run the app on docker change the directory to src if not already**
 
 To build the image type 
 ```bash
