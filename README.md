@@ -17,7 +17,7 @@ A streamlit app to detect coronaviruses from gray scaled electron microscopic im
 * [Run Locally](#run-locally)
 * [Run on docker container](#after-building-the-image-run-the-image-on-a-container)
     - [Build docker image](#to-run-the-app-on-docker-change-the-directory-to-src-if-not-already)
-    - [Pull docker image] 
+    - [Pull docker image](#or) 
 * [Downloading weights](#downloading-trained-weights)
 * [Mean average prediction chart](#mean-average-prediction-chart)
 
@@ -76,7 +76,7 @@ docker run -p 8501:8501 -d streamlit-coronavirus-detection-app:latest
 ```bash
 docker pull ghcr.io/kaushal000/streamlit-coronavirus-detection-app:main
 ```
-<p align="center">or</p?
+###or
 
 ```bash
 docker pull kdocker03/streamlit-coronavirus-detection-app
