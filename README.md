@@ -37,5 +37,6 @@ To run it in background type `docker run -p 8501:8501 -d streamlit-coronavirus-d
 
 ## To download all weights at various epochs including the best one here is the link :point-down: [![Dropbox](https://img.shields.io/badge/Dropbox-%233B4D98.svg?style=for-the-badge&logo=Dropbox&logoColor=white)](https://drive.google.com/drive/folders/1nXGd1WZOlzk8fW36ADKfcHPvm3lBY7OT?usp=sharing)
 
-
+## Mean average prediction chart
+![MAP](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/main/map-chart/chart_cov_yolov4.png)
 
