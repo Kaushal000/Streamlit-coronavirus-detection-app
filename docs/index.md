@@ -28,7 +28,7 @@ Syntax highlighted code block
 
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/docs/docs/demovideo.GIF)
 
 ### Jekyll Themes
 
