@@ -35,8 +35,9 @@ def detect_objects(our_image):
     cfgpath=os.path.join(os.path.dirname( __file__ ),'model','cov_yolov4.cfg')
     modelpath=os.path.join(os.path.dirname( __file__ ),'model','cov_yolov4_best.weights')
 
+    #if weight file doesn't exist download it int the model folder
     if not os.path.exists(modelpath):
-        loc=os.path.join(os.path.dirname( __file__ ),'model')
+        loc=os.path.join(os.path.dirname( __file__ ),'model')#model folder
         d=downloader()
         
         with st.spinner('Downloading weights..'):

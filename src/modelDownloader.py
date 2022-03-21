@@ -1,3 +1,5 @@
+#Model downloading utility app using wget
+
 import os
 from wget import download
 

@@ -1,4 +1,4 @@
-#An utitlity app to detect coronavirus from images. Can be run as standalone
+#An utitlity app to detect coronavirus from video. Can be run as a standalone app .Type streamlit run video,py on the terminal to run it as standalone app
 
 import streamlit as st
 import cv2 
@@ -21,20 +21,7 @@ def getvideo(name):
 
 
     network = cv2.dnn.readNetFromDarknet('model/cov_yolov4.cfg','model/cov_yolov4_best.weights')
-
-
-
-
-    
     layers_names_output = network.getUnconnectedOutLayersNames()
-        
-
-
-
-    
-
-
-   
     #colors = np.random.randint(0, 255, size=(len(labels), 3), dtype='uint8')
     colors = ["0,255,0"]
     colors = [np.array(every_color.split(",")).astype("int") for every_color in colors]
@@ -42,11 +29,11 @@ def getvideo(name):
     colors = np.tile(colors,(1,1))
 
 
-    # Defining loop for catching frames
+  
     stframe = st.empty()
-      
+    # Defining loop for catching frames    
     while vf.isOpened():
-        stf=st.empty()
+        #stf=st.empty()
         ret, frame = vf.read()
         # if frame is read correctly ret is True
         if not ret:
@@ -146,8 +133,10 @@ def getvideo(name):
          
                 
             stframe.image(frame,use_column_width='yes')
-            stf.success("predicted object {}".format(predicted_class_label))    
-            
+            # stf.success("predicted object {}".format(predicted_class_label))    
+
+    if not ret:
+        st.info("Video ended")        
                 
 def object_main():
     f = st.file_uploader("Upload file")
