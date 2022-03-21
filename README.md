@@ -17,7 +17,9 @@ A streamlit app to detect coronaviruses from gray scaled electron microscopic im
 * [Run Locally](#run-locally)
 * [Run on docker container](#after-building-the-image-run-the-image-on-a-container)
     - [Build docker image](#to-run-the-app-on-docker-change-the-directory-to-src-if-not-already)
-    - [Pull docker image](#alternatively-you-can-download-the-already-prebuilt-docker-image-by-either-of-the-two-way ) 
+    - [Pull docker image](#alternatively-you-can-download-the-already-prebuilt-docker-image-by-either-of-the-two-way )
+* [Live demo](#live-demo)
+    - [Uploading and detecting coronaviruses from image](#uploading-and-detecting-coronaviruses-from-image) 
 * [Downloading weights](#downloading-trained-weights)
 * [Mean average prediction chart](#mean-average-prediction-chart)
 
@@ -82,10 +84,15 @@ docker pull ghcr.io/kaushal000/streamlit-coronavirus-detection-app:main
 docker pull kdocker03/streamlit-coronavirus-detection-app
 ```
 
-## Live demo to upload an image and detect coronaviruses from the image :point_down: 
-![alt text](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/main/Demo.gif)
+## Live demo
 
-## You can do similar step to upload a video and detect coronaviruses from the video
+### upload image and detect coronaviruses from the image 
+![Image](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/main/Demo.gif)
+
+### For video 🧪
+![Video](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/main/Demovideo.gif)
+
+
 
 ## Downloading trained weights
 **This app is automatically configured to download the best weight used for detection when this app runs for the first time if the model is not present inside the model folder.
