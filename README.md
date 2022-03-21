@@ -16,7 +16,7 @@ A streamlit app to detect coronaviruses from gray scaled electron microscopic im
 
 * [Run Locally](#run-locally)
 * [Run on docker container](#after-building-the-image-run-the-image-on-a-container)
-* 
+* [Downloading weights](#downloading-trained-weights)
 
 
 ## Run Locally
