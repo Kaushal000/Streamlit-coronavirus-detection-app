@@ -15,6 +15,8 @@ A streamlit app to detect coronaviruses from gray scaled electron microscopic im
 ## Documentation 
 
 * [Run Locally](#run-locally)
+* [Run on docker container](#after-building-the-image-run-the-image-on-a-container)
+* 
 
 
 ## Run Locally
@@ -56,12 +58,12 @@ To build the image type
 ```bash
 docker image build -t streamlit-coronavirus-detection-app:latest`
 ```
-## After building the image run the image on a container 
+**After building the image run the image on a container** 
 ```bash
 docker run -p 8501:8501 streamlit-coronavirus-detection-app:latest
 ```
 
-To run it in background type 
+**To run it in background type** 
 ```bash
 docker run -p 8501:8501 -d streamlit-coronavirus-detection-app:latest
 ```
