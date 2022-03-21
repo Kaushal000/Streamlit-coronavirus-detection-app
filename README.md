@@ -11,13 +11,34 @@
 
 A streamlit app to detect coronaviruses from gray scaled electron microscopic images as well as gray scaled video. 
 
-## To run the app locally git clone the repository and cd into Streamlit-coronavirus-detection-app
+## Run Locally
 
-## Install the dependencies by typing the command in the terminal `pip install -r requirements.txt`
+Clone the project
 
-## Then run streamlit app by typing `streamlit run src/app.py`
+```bash
+  git clone https://github.com/Kaushal000/Streamlit-coronavirus-detection-app.git
+```
 
-## On running the app it will automatically open your default browser and the app will be runing on localhost:8501. If you browser doesn't open automatically open your browser and type the url in the adress bar `localhost:8501`
+
+Install dependencies
+
+```bash
+  pip install requirements.txt
+```
+
+Go to the src directory
+
+```bash
+  cd src
+```
+
+Start the server
+
+```bash
+  streamlit run app.py
+```
+
+## On running the app it will automatically open your default browser and the app will be running on localhost:8501. If you browser doesn't open automatically open your browser and type the url in the adress bar `localhost:8501`
 
 ## To run the app on docker change the directory to src
 
