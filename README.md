@@ -33,7 +33,7 @@ To run it in background type `docker run -p 8501:8501 -d streamlit-coronavirus-d
 ## You can do similar step to upload a video and detect coronaviruses from the video
 
 ## This app is automatically configured to download the best weight used for detection when this app runs for the first time.
-### However you can download the best weight manually before running the app from here :point_right: and put it inside the model folder :point_right: [![Dropbox](https://img.shields.io/badge/Dropbox-%233B4D98.svg?style=for-the-badge&logo=Dropbox&logoColor=white)](https://www.dropbox.com/s/909wlai4r3y4uz1/cov_yolov4_best.weights?dl=0)
+### However you can download the best weight manually before running the app from here and put it inside the model folder :point_right: [![Dropbox](https://img.shields.io/badge/Dropbox-%233B4D98.svg?style=for-the-badge&logo=Dropbox&logoColor=white)](https://www.dropbox.com/s/909wlai4r3y4uz1/cov_yolov4_best.weights?dl=0)
 
 ## To download all weights at various epochs including the best one here is the link :point-down: [![Dropbox](https://img.shields.io/badge/Dropbox-%233B4D98.svg?style=for-the-badge&logo=Dropbox&logoColor=white)](https://drive.google.com/drive/folders/1nXGd1WZOlzk8fW36ADKfcHPvm3lBY7OT?usp=sharing)
 
