@@ -11,6 +11,8 @@ testfile.py
 favicon.png
 cov_yolov4_best.weights6knl6tbg.tmp
 cov_yolov4_best.weights
+cov_yolov4_best.weights
+Test-video
 
 # C extensions
 *.so
