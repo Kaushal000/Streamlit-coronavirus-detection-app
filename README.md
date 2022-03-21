@@ -12,6 +12,10 @@
 
 A streamlit app to detect coronaviruses from gray scaled electron microscopic images as well as gray scaled video. 
 
+Documentation 
+[Run Locally](#run%20locally)
+
+
 ## Run Locally
 
 Clone the project
