@@ -38,25 +38,34 @@ Start the server
   streamlit run app.py
 ```
 
-## On running the app it will automatically open your default browser and the app will be running on localhost:8501. If you browser doesn't open automatically open your browser and type the url in the adress bar `bash localhost:8501`
+On running the app it will automatically open your default browser and the app will be running on localhost:8501. If you browser doesn't open automatically open your browser and type the url in the adress bar 
 
-## To run the app on docker change the directory to src
+```bash 
+localhost:8501
+```
 
-## To build the image type `docker image build -t streamlit-coronavirus-detection-app:latest`
+##To run the app on docker change the directory to src if not already
 
+To build the image type 
+```bash
+docker image build -t streamlit-coronavirus-detection-app:latest`
+```
 ## After building the image run the image on a container by typing ### `docker run -p 8501:8501 streamlit-coronavirus-detection-app:latest`
 
-To run it in background type `docker run -p 8501:8501 -d streamlit-coronavirus-detection-app:latest`
-
+To run it in background type 
+```bash
+docker run -p 8501:8501 -d streamlit-coronavirus-detection-app:latest
+```
 ## Live demo to upload an image and detect coronaviruses from the image :point_down: 
 ![alt text](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/main/Demo.gif)
 
 ## You can do similar step to upload a video and detect coronaviruses from the video
 
-## This app is automatically configured to download the best weight used for detection when this app runs for the first time if the model is not present inside the model folder.
-### However you can download the best weight manually before running the app from here and put it inside the model folder :point_right: [![Dropbox](https://img.shields.io/badge/Dropbox-%233B4D98.svg?style=for-the-badge&logo=Dropbox&logoColor=white)](https://www.dropbox.com/s/909wlai4r3y4uz1/cov_yolov4_best.weights?dl=0)
+**This app is automatically configured to download the best weight used for detection when this app runs for the first time if the model is not present inside the model folder.
 
-## To download all weights at various epochs including the best one here is the link 
+***However you can download the best weight manually before running the app from here and put it inside the model folder :point_right: [![Dropbox](https://img.shields.io/badge/Dropbox-%233B4D98.svg?style=for-the-badge&logo=Dropbox&logoColor=white)](https://www.dropbox.com/s/909wlai4r3y4uz1/cov_yolov4_best.weights?dl=0)
+
+**To download all the weights obtained at various epochs including the best one here is the link 
 :point_right: [![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1nXGd1WZOlzk8fW36ADKfcHPvm3lBY7OT?usp=sharing)
 
 ## Mean average prediction chart
