@@ -64,7 +64,7 @@ docker run -p 8501:8501 -d streamlit-coronavirus-detection-app:latest
 
 ## You can do similar step to upload a video and detect coronaviruses from the video
 
-##Downloading weights
+## Downloading trained weights
 **This app is automatically configured to download the best weight used for detection when this app runs for the first time if the model is not present inside the model folder.
 
 ***However you can download the best weight manually before running the app from here and put it inside the model folder*** :point_right: [![Dropbox](https://img.shields.io/badge/Dropbox-%233B4D98.svg?style=for-the-badge&logo=Dropbox&logoColor=white)](https://www.dropbox.com/s/909wlai4r3y4uz1/cov_yolov4_best.weights?dl=0)
