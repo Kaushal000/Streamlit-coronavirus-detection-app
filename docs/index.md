@@ -87,6 +87,6 @@ docker pull kdocker03/streamlit-coronavirus-detection-app
 ## Live demo
 
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/docs/docs/demo.gif)
 
 
