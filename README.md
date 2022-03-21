@@ -67,7 +67,8 @@ docker run -p 8501:8501 -d streamlit-coronavirus-detection-app:latest
 ## Downloading trained weights
 **This app is automatically configured to download the best weight used for detection when this app runs for the first time if the model is not present inside the model folder.
 
-***However you can download the best weight manually before running the app from here and put it inside the model folder*** :point_right: [![Dropbox](https://img.shields.io/badge/Dropbox-%233B4D98.svg?style=for-the-badge&logo=Dropbox&logoColor=white)](https://www.dropbox.com/s/909wlai4r3y4uz1/cov_yolov4_best.weights?dl=0)
+***However you can download the best weight manually before running the app from here and put it inside the model folder*** 
+:point_right: [![Dropbox](https://img.shields.io/badge/Dropbox-%233B4D98.svg?style=for-the-badge&logo=Dropbox&logoColor=white)](https://www.dropbox.com/s/909wlai4r3y4uz1/cov_yolov4_best.weights?dl=0)
 
 **To download all the weights obtained at various epochs including the best one here is the link** 
 :point_right: [![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1nXGd1WZOlzk8fW36ADKfcHPvm3lBY7OT?usp=sharing)
