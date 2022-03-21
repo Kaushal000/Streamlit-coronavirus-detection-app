@@ -17,7 +17,7 @@ A streamlit app to detect coronaviruses from gray scaled electron microscopic im
 * [Run Locally](#run-locally)
 * [Run on docker container](#after-building-the-image-run-the-image-on-a-container)
     - [Build docker image](#to-run-the-app-on-docker-change-the-directory-to-src-if-not-already)
-    - [Pull docker image](#or) 
+    - [Pull docker image](#alternatively-you-can-download-the-already-prebuilt-docker-image-by-either-of-the-two-way ) 
 * [Downloading weights](#downloading-trained-weights)
 * [Mean average prediction chart](#mean-average-prediction-chart)
 
@@ -56,7 +56,7 @@ On running the app it will automatically open your default browser and the app w
 localhost:8501
 ```
 
-###To run the app on docker change the directory to src if not already
+### To run the app on docker change the directory to src if not already
 
 To build the image type 
 ```bash
@@ -71,12 +71,12 @@ docker run -p 8501:8501 streamlit-coronavirus-detection-app:latest
 ```bash
 docker run -p 8501:8501 -d streamlit-coronavirus-detection-app:latest
 ```
-###Alternatively you can download the already prebuilt docker image by either of the two ways 
+### Alternatively you can download the already prebuilt docker image by either of the two ways 
 
 ```bash
 docker pull ghcr.io/kaushal000/streamlit-coronavirus-detection-app:main
 ```
-###or
+
 
 ```bash
 docker pull kdocker03/streamlit-coronavirus-detection-app
