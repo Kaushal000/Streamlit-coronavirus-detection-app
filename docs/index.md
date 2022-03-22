@@ -86,7 +86,7 @@ docker pull kdocker03/streamlit-coronavirus-detection-app
 
 ## Live demo
 
-### Uploading image and detecting coronaviruses 📷
+### Uploading image and detect coronaviruses from the image 📷
 ![Alt Text](demo.gif)
 
 ### For video :video_camera:
