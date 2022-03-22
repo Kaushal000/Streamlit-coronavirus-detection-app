@@ -104,6 +104,6 @@ docker pull kdocker03/streamlit-coronavirus-detection-app
 :point_right: [![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1nXGd1WZOlzk8fW36ADKfcHPvm3lBY7OT?usp=sharing)
 
 ## Mean average prediction chart
-<!-- ![MAP](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/main/map-chart/chart_cov_yolov4.png) -->
+![MAP](cov.png)
 
 
