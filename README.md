@@ -107,7 +107,7 @@ docker pull kdocker03/streamlit-coronavirus-detection-app
 :point_right: [![GD](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=393665)](https://drive.google.com/drive/folders/1nXGd1WZOlzk8fW36ADKfcHPvm3lBY7OT?usp=sharing)
 
 ## Training and testing 
-Download the required files for training [![GD](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=Adobe%20after%20effects&logoColor=393665)](https://drive.google.com/drive/folders/14Mrj9PmPaECouSZhlkoRIjiTF0FZSqUP?usp=sharing)
+Download the required files for training [![GD](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=393665)](https://drive.google.com/drive/folders/14Mrj9PmPaECouSZhlkoRIjiTF0FZSqUP?usp=sharing)
 
 **The model is trained on a dataset containing 200 samples of grayscaled electron microscope coronavirus images and split into 80:20 train:test data which is for training there were 160 samples and for validation 20 samples** . An ipynb notebook containing the entire traing and testing process is provided <a href="https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/main/Coronavirus_detection_train_and_test_model.ipynb">here</a>
 
