@@ -23,7 +23,8 @@ A streamlit app to detect coronaviruses from gray scaled electron microscopic im
 * [Downloading weights](#downloading-trained-weights)
 * [Train and test](#training-and-testing)
 * [Results](#results)
-    - [Mean average prediction chart](#mean-average-prediction-chart)
+    - [Weghts comparisons](#comparison-of-weights-for-confidence-threshold-0.25-and-IOU-threshold-0.5-or-50%)
+    - [Mean average prediction chart](#mean-average-prediction-chart-at-different-epochs-along-with-loss)
 
 
 
@@ -117,18 +118,17 @@ Read more about how to train custom models here [![colab](https://user-images.gi
 
 ## Results
 
-### Comparison of weights 
+### Comparison of weights for confidence threshold 0.25 and IOU threshold 0.5 or 50%
 
-| Weights...................| Precision.| Recall.| F1-score.| map.....| TP.....|FP.... |FN... |       
-| :------------------------ | :-------- | :----- | :------- | :------ | :----- | :---- | :----| 
+| Weights                   | Precision | Recall | F1-score | map     | TP     |FP     |FN    |       
 | `cov_yolov4_1000.weights` | `0.87`    | `0.89` |  `0.88`  | `89.71%`|  `155` |  `23` |  `20`| 
-| :------------------------ | :-------- | :----- | :------- | :------ | :----- | :---- | :----| 
-| `cov_yolov4_2000.weights` | `0.87`    | `0.89` |  `0.88`  | `89.71%`|  `155` |  `23` |  `20`| 
+| `cov_yolov4_2000.weights` | `0.93`    | `0.80` |  `0.86`  | `85.07%`|  `140` |  `11` |  `35`| 
+| `cov_yolov4_best.weights` | `0.87`    | `0.89` |  `0.88`  | `89.71%`|  `155` |  `23` |  `20`| 
 
 
 
 
 
-### Mean average prediction chart
+### Mean average prediction chart at different epochs along with loss
 ![MAP](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/main/map-chart/chart_cov_yolov4.png)
 
