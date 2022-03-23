@@ -108,7 +108,7 @@ docker pull kdocker03/streamlit-coronavirus-detection-app
 ## Training and testing 
 **The model is trained on a dataset containing 200 samples of grayscaled electron microscope coronavirus images and split into 80:20 train:test data which is for training there were 160 samples and for validation 20 samples** . An ipynb notebook containing the entire traing and testing process is provided ![here]('Coronavirus_detection_train_and_test_model.ipynb').
 
-Alternatively open in google colab to go through the traing and testing process [here](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/main/Coronavirus_detection_train_and_test_model.ipynb)
+Alternatively open in google colab to go through the traing and testing process go here [a link](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/main/Coronavirus_detection_train_and_test_model.ipynb)
 
 Read more about how to train custom models here [![colab](https://user-images.githubusercontent.com/4096485/86174097-b56b9000-bb29-11ea-9240-c17f6bacfc34.png)](https://colab.research.google.com/drive/1_GdoqCJWXsChrOiY8sZMr_zbr_fH-0Fg)
 
