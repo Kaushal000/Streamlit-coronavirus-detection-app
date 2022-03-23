@@ -21,7 +21,10 @@ A streamlit app to detect coronaviruses from gray scaled electron microscopic im
     - [Uploading and detecting coronaviruses from image](#uploading-image-and-detect-coronaviruses-from-the-image-camera)
     - [Uploading video and detecting coronaviruses from the uploaded video](#for-video-video_camera) 
 * [Downloading weights](#downloading-trained-weights)
-* [Mean average prediction chart](#mean-average-prediction-chart)
+* [Train and test](#training-and-testing)
+* [Results](#results)
+    - [Weghts comparisons](#comparison-of-weights-for-confidence-threshold-0.25-and-IOU-threshold-0.5-or-50%)
+    - [Mean average prediction chart](#mean-average-prediction-chart-at-different-epochs-along-with-loss)
 
 
 
@@ -95,14 +98,38 @@ docker pull kdocker03/streamlit-coronavirus-detection-app
 
 
 ## Downloading trained weights
+
 **This app is automatically configured to download the best weight used for detection when this app runs for the first time if the model is not present inside the model folder.
 
 ***However you can download the best weight manually before running the app from here and put it inside the model folder*** 
 :point_right: [![Dropbox](https://img.shields.io/badge/Dropbox-%233B4D98.svg?style=for-the-badge&logo=Dropbox&logoColor=white)](https://www.dropbox.com/s/909wlai4r3y4uz1/cov_yolov4_best.weights?dl=0)
 
 **To download all the weights obtained at various epochs including the best one here is the link** 
-:point_right: [![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1nXGd1WZOlzk8fW36ADKfcHPvm3lBY7OT?usp=sharing)
+:point_right: [![GD](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=393665)](https://drive.google.com/drive/folders/1nXGd1WZOlzk8fW36ADKfcHPvm3lBY7OT?usp=sharing)
 
-## Mean average prediction chart
+## Training and testing 
+Download the required files for training [![GD](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=393665)](https://drive.google.com/drive/folders/14Mrj9PmPaECouSZhlkoRIjiTF0FZSqUP?usp=sharing)
+
+**The model is trained on a dataset containing 200 samples of grayscaled electron microscope coronavirus images and split into 80:20 train:test data which is for training there were 160 samples and for validation 20 samples** . An ipynb notebook containing the entire traing and testing process including the compilattion of darknet framwork is provided here <a href="https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/main/Coronavirus_detection_train_and_test_model.ipynb">here</a>
+
+Alternatively open in google colab to go through the traing and testing process here [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1KszU9b3t-T_Ia5GNjiy_uuktOnydlEID)
+
+Read more about how to train custom models here [![colab](https://user-images.githubusercontent.com/4096485/86174097-b56b9000-bb29-11ea-9240-c17f6bacfc34.png)](https://colab.research.google.com/drive/1_GdoqCJWXsChrOiY8sZMr_zbr_fH-0Fg?style=for-the-badge&logo=googledrive&logoColor=)
+
+## Results
+
+### Comparison of weights for confidence threshold 0.25 and IOU threshold 0.5 or 50%
+
+| Weights                    | Precision | Recall | F1-score | map     | TP     | FP    | FN    |   
+| :-----------------------:  | :-------: | :----: |  :----:  | :-----: | :----: | :---: | :---: |
+| `cov_yolov4_1000.weights`  | `0.87`    | `0.89` |  `0.88`  | `89.71%`|  `155` |  `23` |  `20` | 
+| `cov_yolov4_2000.weights`  | `0.93`    | `0.80` |  `0.86`  | `85.07%`|  `140` |  `11` |  `35` | 
+| `cov_yolov4_best.weights`  | `0.87`    | `0.89` |  `0.88`  | `89.71%`|  `155` |  `23` |  `20` | 
+
+
+
+
+
+### Mean average prediction chart at different epochs along with loss
 ![MAP](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/main/map-chart/chart_cov_yolov4.png)
 
