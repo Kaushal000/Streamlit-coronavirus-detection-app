@@ -120,10 +120,11 @@ Read more about how to train custom models here [![colab](https://user-images.gi
 
 ### Comparison of weights for confidence threshold 0.25 and IOU threshold 0.5 or 50%
 
-| Weights                   | Precision | Recall | F1-score | map     | TP     |FP     |FN    |       
-| `cov_yolov4_1000.weights` | `0.87`    | `0.89` |  `0.88`  | `89.71%`|  `155` |  `23` |  `20`| 
-| `cov_yolov4_2000.weights` | `0.93`    | `0.80` |  `0.86`  | `85.07%`|  `140` |  `11` |  `35`| 
-| `cov_yolov4_best.weights` | `0.87`    | `0.89` |  `0.88`  | `89.71%`|  `155` |  `23` |  `20`| 
+| Weights                    | Precision | Recall | F1-score | map     | TP     | FP    | FN    |   
+| :-----------------------:  | :-------: | :----: |  :----:  | :-----: | :----: | :---: | :---: |
+| `cov_yolov4_1000.weights`  | `0.87`    | `0.89` |  `0.88`  | `89.71%`|  `155` |  `23` |  `20` | 
+| `cov_yolov4_2000.weights`  | `0.93`    | `0.80` |  `0.86`  | `85.07%`|  `140` |  `11` |  `35` | 
+| `cov_yolov4_best.weights`  | `0.87`    | `0.89` |  `0.88`  | `89.71%`|  `155` |  `23` |  `20` | 
 
 
 
