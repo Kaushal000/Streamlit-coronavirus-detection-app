@@ -5,6 +5,7 @@ import streamlit as st
 import cv2 
 import numpy as np
 import tempfile
+from modelDownloader import downloader
 
 
 def getvideo(name):
@@ -23,6 +24,13 @@ def getvideo(name):
 
     cfgpath=os.path.join(os.path.dirname( __file__ ),'model','cov_yolov4.cfg')
     modelpath=os.path.join(os.path.dirname( __file__ ),'model','cov_yolov4_best.weights')
+      #if weight file doesn't exist download it int the model folder
+    if not os.path.exists(modelpath):
+        loc=os.path.join(os.path.dirname( __file__ ),'model')#model folder
+        d=downloader()
+        
+        with st.spinner('Downloading weights..'):
+            d.downloadFile("https://dl.dropbox.com/s/909wlai4r3y4uz1/cov_yolov4_best.weights?dl=1",loc)
     
     network = cv2.dnn.readNetFromDarknet(cfgpath,modelpath)
     layers_names_output = network.getUnconnectedOutLayersNames()
