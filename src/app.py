@@ -103,9 +103,30 @@ def detect_objects(our_image):
     ############## NMS Change 3 ###############
     # Applying the NMS will return only the selected max value ids while suppressing the non maximum (weak) overlapping bounding boxes      
     # Non-Maxima Suppression confidence set as 0.5 & max_suppression threhold for NMS as 0.4 (adjust and try for better perfomance)
-    score_threshold = st.sidebar.slider("Confidence Threshold", 0.00,1.00,0.5,0.01)
-    nms_threshold = st.sidebar.slider("NMS Threshold", 0.00, 1.00, 0.4, 0.01)
+    # score_threshold = st.sidebar.slider("Confidence Threshold", 0.00,1.00,0.5,0.01)
+    # nms_threshold = st.sidebar.slider("NMS Threshold", 0.00, 1.00, 0.4, 0.01)
     
+    with st.sidebar:
+        score_threshold=st.slider("Confidence Threshold", 0.00,1.00,0.5,0.01)
+        nms_threshold =st.slider("NMS Threshold", 0.00, 1.00, 0.4, 0.01)
+        st.markdown("""
+        <style>
+        div.Heading h3{
+            margin: auto;
+            width: 50%;
+            color: #dc3545;
+            padding: 10px;
+        }
+       
+        </style>
+        """,unsafe_allow_html=True)
+        
+        st.markdown("""
+        <br><br>
+        <div className="Heading"><h3>Presentation</h3></div>
+        <iframe src="https://onedrive.live.com/embed?cid=CC721E0634E29AC8&amp;resid=CC721E0634E29AC8%2113676&amp;authkey=AJqlhggJ3vIp8MA&amp;em=2&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=1" width="300px" height="288px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+        """,unsafe_allow_html=True)
+        
     max_value_ids = cv2.dnn.NMSBoxes(boxes_list, confidences_list,score_threshold,nms_threshold )
 
     # loop through the final set of detections remaining after NMS and draw bounding box and write text
@@ -346,10 +367,10 @@ def object_main():
     st.markdown("""
     <nav class="navbar">
 		<a href="#">Home</a>
-		<a href="#">PPT</a>
-		<a href="#" class="current">Gallery</a>
-		<a href="#">Training</a>
-		<a href="#">Contact</a>
+		<a href="#">Docs</a>
+		<a href="#" class="current">Thesis</a>
+		<a href="https://colab.research.google.com/drive/1KszU9b3t-T_Ia5GNjiy_uuktOnydlEID" target="_blank">Training</a>
+		<a href="https://github.com/Kaushal000/Streamlit-coronavirus-detection-app" target="_blank">Code</a>
 		<div class="nav-underline"></div>
 		<div class="nav-underline2"></div>
 	</nav>""",unsafe_allow_html=True)
@@ -358,7 +379,7 @@ def object_main():
     st.title("Object Detection")
     st.write("Object detection is a central algorithm in computer vision. The algorithm implemented below is YOLO (You Only Look Once), a state-of-the-art algorithm trained to identify thousands of objects types. It extracts objects from images and identifies them using OpenCV and Yolo. This task involves Deep Neural Networks(DNN), yolo trained model, yolo configuration and a dataset to detect objects.")
 
-    choice = st.radio("", ("Show Demo", "Browse an Image" ,"Upload video"))
+    choice = st.radio("", ("Show Demo", "Browse an Image","Show stats","Upload video"))
     
     # choice = st.radio("", ("Browse an Image" ,"Upload video"))
     st.write()
@@ -396,16 +417,16 @@ def object_main():
             with col3:
                 st.write("")
         
-
-
-       
+    elif choice=="Show stats":
+        location=os.path.join(os.path.dirname( __file__ ), 'images','cov.png')
+        stats_image = Image.open(location)
+        st.image(stats_image,width=20,use_column_width='auto')
 
     else :
         iloc=os.path.join(os.path.dirname( __file__ ), 'images','coronavirus.jpg')
         our_image = Image.open(iloc)
         detect_objects(our_image)
 # embed streamlit docs in a streamlit app
-
 
 if __name__ == '__main__':
     object_main()
