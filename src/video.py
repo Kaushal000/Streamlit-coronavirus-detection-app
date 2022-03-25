@@ -1,5 +1,6 @@
 #An utitlity app to detect coronavirus from video. Can be run as a standalone app .Type streamlit run video,py on the terminal to run it as standalone app
 
+import os
 import streamlit as st
 import cv2 
 import numpy as np
@@ -20,7 +21,10 @@ def getvideo(name):
     class_labels = ["corona_virus"]
 
 
-    network = cv2.dnn.readNetFromDarknet('model/cov_yolov4.cfg','model/cov_yolov4_best.weights')
+    cfgpath=os.path.join(os.path.dirname( __file__ ),'model','cov_yolov4.cfg')
+    modelpath=os.path.join(os.path.dirname( __file__ ),'model','cov_yolov4_best.weights')
+    
+    network = cv2.dnn.readNetFromDarknet(cfgpath,modelpath)
     layers_names_output = network.getUnconnectedOutLayersNames()
     #colors = np.random.randint(0, 255, size=(len(labels), 3), dtype='uint8')
     colors = ["0,255,0"]
