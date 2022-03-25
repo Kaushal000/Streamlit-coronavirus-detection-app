@@ -101,6 +101,7 @@ docker pull kdocker03/streamlit-coronavirus-detection-app
 
 ### For video :video_camera:
 ![Video](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/main/Demovideo.gif)
+Sample video to test [![GD](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=393665)](https://drive.google.com/file/d/1kVfiah1S-eiRa86webkjT_fYuryulmHh/view?usp=sharing)
 
 
 
