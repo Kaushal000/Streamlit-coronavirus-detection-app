@@ -423,8 +423,16 @@ def object_main():
         stats_image = Image.open(location)
         st.image(stats_image,width=20,use_column_width='auto')
         st.markdown("""
+        <style>
+        .Blue{
+            color:rgb(12,23,138)
+        }
+        .Red{
+            color:rgb(245,66,81)
+        }
+        </style>
         <p>
-        <strong>The&nbsp;<span class="Blue">blue&nbsp;</span>line depicts average loss while the <span class="Red">red&nbsp;</span>line depicts mAP%</strong></p>
+        <strong>The&nbsp;<span class="Blue">blue&nbsp;</span>line depicts average loss while the&nbsp;<span class="Red">red&nbsp;</span>line depicts mAP%</strong></p>
         """,unsafe_allow_html=True)
        
     
