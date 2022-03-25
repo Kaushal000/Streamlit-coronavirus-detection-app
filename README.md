@@ -30,6 +30,8 @@ A streamlit app to detect coronaviruses from gray scaled electron microscopic im
 * [Deployment](#deployment)
     - [Streamlit share](#streamlit-share)
     - [Heroku](#heroku) 
+* [Reference links](#reference-links)
+* [citation](#citation)
 
 
 
@@ -129,7 +131,7 @@ Read more about how to train custom models here [![colab](https://user-images.gi
 | :-----------------------:  | :-------: | :----: |  :----:  | :-----: | :----: | :---: | :---: |
 | `cov_yolov4_1000.weights`  | `0.87`    | `0.89` |  `0.88`  | `89.13%`|  `150` |  `40` |  `25` | 
 | `cov_yolov4_2000.weights`  | `0.93`    | `0.80` |  `0.86`  | `85.07%`|  `140` |  `11` |  `35` | 
-| `cov_yolov4_best.weights`  | `0.87`    | `0.89` |  `0.88`  | `89.71%`|  `155` |  `23` |  `20` | 
+| `cov_yolov4_best.weights`  | `0.87`    | `0.89` |  `0.88`  | `91.13%`|  `155` |  `23` |  `20` | 
 
 
 
@@ -147,3 +149,34 @@ The presentation for the entire project can be found here 👉 [![Microsoft Powe
 
 ### Heroku
 **The app is also deployed on heroku using Docker image with CI/CD enabled with the help of github actions** [![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)](https://streamlit-github.herokuapp.com/)
+
+## Reference links
+<a href="https://github.com/AlexeyAB/darknet" target="_blank">AlexeyAB/darknet</a>
+
+Yolov4 paper 👉 [![arxiv.org](http://img.shields.io/badge/cs.CV-arXiv%3A2004.10934-B31B1B.svg)](https://arxiv.org/abs/2004.10934)
+Scaled Yolov4 paper 👉 [![arxiv.org](http://img.shields.io/badge/cs.CV-arXiv%3A2011.08036-B31B1B.svg)](https://arxiv.org/abs/2011.08036)
+
+<a href="https://baike.baidu.com/item/2019" target="_blank">Image, B.: The electron microscopic image of SARS-CoV-2</a> 
+
+## Citation 
+```
+@misc{bochkovskiy2020yolov4,
+      title={YOLOv4: Optimal Speed and Accuracy of Object Detection}, 
+      author={Alexey Bochkovskiy and Chien-Yao Wang and Hong-Yuan Mark Liao},
+      year={2020},
+      eprint={2004.10934},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
+
+```
+@InProceedings{Wang_2021_CVPR,
+    author    = {Wang, Chien-Yao and Bochkovskiy, Alexey and Liao, Hong-Yuan Mark},
+    title     = {{Scaled-YOLOv4}: Scaling Cross Stage Partial Network},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2021},
+    pages     = {13029-13038}
+}
+```
