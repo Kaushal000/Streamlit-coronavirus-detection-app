@@ -423,7 +423,7 @@ def object_main():
         stats_image = Image.open(location)
         st.image(stats_image,width=20,use_column_width='auto')
         st.markdown("""
-        <p><The<span color="blue">&nbsp;blue&nbsp;</span>line depicts average loss while the<span color="red">&nbsp;red&nbsp;</span>depicts mAP%<p>""",unsafe_allow_html=True)
+        <p><The<span>&nbsp;blue&nbsp;</span>line depicts average loss while the<span>&nbsp;red&nbsp;</span>depicts mAP%<p>""",unsafe_allow_html=True)
     
     else :
         iloc=os.path.join(os.path.dirname( __file__ ), 'images','coronavirus.jpg')
