@@ -31,7 +31,7 @@ A streamlit app to detect coronaviruses from gray scaled electron microscopic im
     - [Streamlit share](#streamlit-share)
     - [Heroku](#heroku) 
 * [Reference links](#reference-links)
-* [citation](#citation)
+* [Citation](#citation)
 
 
 
