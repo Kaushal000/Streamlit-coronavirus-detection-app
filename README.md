@@ -138,12 +138,12 @@ Read more about how to train custom models here [![colab](https://user-images.gi
 ### Mean average prediction chart at different epochs along with loss
 ![MAP](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/main/map-chart/chart_cov_yolov4.png)
 
-##Presentation 
+## Presentation 
 The presentation for the entire project can be found here 👉 [![Microsoft PowerPoint](https://img.shields.io/badge/Microsoft_PowerPoint-B7472A?style=for-the-badge&logo=microsoft-powerpoint&logoColor=white)](https://1drv.ms/p/s!Asia4jQGHnLM6mzcO4j0SJydJfTD?e=UP4awf)
 
-##Deployment
-###Streamlit share
+## Deployment
+### Streamlit share
 **The app is deployed on streamlit share** [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/kaushal000/streamlit-coronavirus-detection-app/main/src/app.py)
 
-###Heroku
-**The app is also deployed on heroku using Docker image with CI/CD enabled with the help of github actions [![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)](https://streamlit-github.herokuapp.com/)
+### Heroku
+**The app is also deployed on heroku using Docker image with CI/CD enabled with the help of github actions** [![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)](https://streamlit-github.herokuapp.com/)
