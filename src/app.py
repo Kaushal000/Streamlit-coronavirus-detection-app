@@ -422,7 +422,7 @@ def object_main():
         location=os.path.join(os.path.dirname( __file__ ), 'images','cov.png')
         stats_image = Image.open(location)
         st.image(stats_image,width=20,use_column_width='auto')
-        st.write("The blue line depicts average loss while the red line depicts mAP%")
+        st.write("<b>The blue line depicts average loss while the red line depicts mAP%</b>")
        
     
     else :
