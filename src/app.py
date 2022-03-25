@@ -111,8 +111,8 @@ def detect_objects(our_image):
         st.session_state.nms=0.4
     
     with st.sidebar:
-        score_threshold=st.slider("Confidence Threshold",value=(0.00,1.00,0.5,0.01))
-        nms_threshold =st.slider("NMS Threshold",value=(0.00, 1.00,0.4, 0.01))
+        score_threshold=st.slider("Confidence Threshold",0.00,1.00,0.5,0.01)
+        nms_threshold =st.slider("NMS Threshold",0.00, 1.00,0.4, 0.01)
         st.session_state.conf=score_threshold
         st.session_state.nms=nms_threshold
         st.markdown("""
