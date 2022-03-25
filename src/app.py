@@ -109,6 +109,8 @@ def detect_objects(our_image):
     with st.sidebar:
         score_threshold=st.slider("Confidence Threshold", 0.00,1.00,0.5,0.01)
         nms_threshold =st.slider("NMS Threshold", 0.00, 1.00, 0.4, 0.01)
+        st.session_state.conf=float(score_threshold)
+        st.session_state.nms=float(nms_threshold)
         st.markdown("""
         <style>
         div.Heading h3{
