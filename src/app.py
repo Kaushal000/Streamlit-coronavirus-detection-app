@@ -124,7 +124,7 @@ def detect_objects(our_image):
         st.markdown("""
         <br><br>
         <div className="Heading"><h3>Presentation</h3></div>
-        <iframe src="https://onedrive.live.com/embed?cid=CC721E0634E29AC8&amp;resid=CC721E0634E29AC8%2113676&amp;authkey=AJqlhggJ3vIp8MA&amp;em=2&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=1" width="300px" height="288px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+        <iframe src="https://onedrive.live.com/embed?cid=CC721E0634E29AC8&amp;resid=CC721E0634E29AC8%2113676&amp;authkey=AJqlhggJ3vIp8MA&amp;em=2&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=0" width="300px" height="288px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
         """,unsafe_allow_html=True)
         
     max_value_ids = cv2.dnn.NMSBoxes(boxes_list, confidences_list,score_threshold,nms_threshold )
@@ -418,6 +418,7 @@ def object_main():
                 st.write("")
         
     elif choice=="Show stats":
+        st.title("Graph containing the average loass as well as mAP%")
         location=os.path.join(os.path.dirname( __file__ ), 'images','cov.png')
         stats_image = Image.open(location)
         st.image(stats_image,width=20,use_column_width='auto')
