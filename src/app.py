@@ -105,13 +105,11 @@ def detect_objects(our_image):
     # Non-Maxima Suppression confidence set as 0.5 & max_suppression threhold for NMS as 0.4 (adjust and try for better perfomance)
     # score_threshold = st.sidebar.slider("Confidence Threshold", 0.00,1.00,0.5,0.01)
     # nms_threshold = st.sidebar.slider("NMS Threshold", 0.00, 1.00, 0.4, 0.01)
-    a=st.session_state(conf=0,nms=0)
-
+    
     with st.sidebar:
         score_threshold=st.slider("Confidence Threshold", 0.00,1.00,0.5,0.01)
         nms_threshold =st.slider("NMS Threshold", 0.00, 1.00, 0.4, 0.01)
-        a.conf=float(score_threshold)
-        a.nms=float(nms_threshold)
+        
         st.markdown("""
         <style>
         div.Heading h3{
