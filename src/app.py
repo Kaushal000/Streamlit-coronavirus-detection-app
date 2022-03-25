@@ -206,17 +206,7 @@ def object_main():
             footer {visibility: hidden;}
             </style>
             """
-    st.markdown("""
-        <style>
-        .css-18e3th9{
-        position: relative;
-        padding-bottom: 0px;
-        padding-top: 0px;
-        }
-    </style>""",unsafe_allow_html=True)
-    
-    st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
-    
+    # Overriding some default styles
     st.markdown("""
     <style>
     div.css-18e3th9{
@@ -227,6 +217,8 @@ def object_main():
     </style>
     """,unsafe_allow_html=True)
     
+    #Creating navbar
+    #Declaring styles for navbar
     st.markdown("""
     <style>
     nav{
@@ -366,10 +358,11 @@ def object_main():
     </style>
     """,unsafe_allow_html=True)
     
+    #Navbar links modify it accordint to needs
     st.markdown("""
     <nav class="navbar">
 		<a href="#">Home</a>
-		<a href="#">Docs</a>
+		<a href="https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/wiki" target="_blank">Docs</a>
 		<a href="#" class="current">Thesis</a>
 		<a href="https://colab.research.google.com/drive/1KszU9b3t-T_Ia5GNjiy_uuktOnydlEID" target="_blank">Training</a>
 		<a href="https://github.com/Kaushal000/Streamlit-coronavirus-detection-app" target="_blank">Code</a>
