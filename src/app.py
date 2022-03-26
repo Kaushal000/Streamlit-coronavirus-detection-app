@@ -372,8 +372,8 @@ def object_main():
 	</nav>""",unsafe_allow_html=True)
 
   
-    st.title("Object Detection")
-    st.write("Object detection is a central algorithm in computer vision. The algorithm implemented below is YOLO (You Only Look Once), a state-of-the-art algorithm trained to identify thousands of objects types. It extracts objects from images and identifies them using OpenCV and Yolo. This task involves Deep Neural Networks(DNN), yolo trained model, yolo configuration and a dataset to detect objects.")
+    st.title("Novel Coronavirus detection using custom trained Yolov4 model")
+    st.write("The app detects coronaviruses from both images and video. It employs the YOLO algorithm (You Only Look Once), a state-of-the-art algorithm trained to identify thousands of objects types. It extracts objects from images and identifies them using OpenCV and Yolo. This task involves Deep Neural Networks(DNN), yolo trained model, yolo configuration and a dataset to detect objects.")
 
     choice = st.radio("", ("Show Demo", "Browse an Image","Show stats","Upload video"))
     
