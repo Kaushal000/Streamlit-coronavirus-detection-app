@@ -362,7 +362,7 @@ def object_main():
     #Navbar links modify it accordint to needs
     st.markdown("""
     <nav class="navbar">
-		<a href="/">Home</a>
+		<a href="#">Home</a>
 		<a href="https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/wiki" target="_blank">Docs</a>
 		<a href="#" class="current">Thesis</a>
 		<a href="https://colab.research.google.com/drive/1KszU9b3t-T_Ia5GNjiy_uuktOnydlEID" target="_blank">Training</a>
