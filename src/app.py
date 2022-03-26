@@ -375,7 +375,7 @@ def object_main():
     st.title("Novel Coronavirus detection")
     st.write("The app detects coronaviruses from both images and video. It employs the YOLO algorithm (You Only Look Once), a state-of-the-art algorithm trained to identify thousands of objects types. It extracts objects from images and identifies them using OpenCV and Yolo. This task involves Deep Neural Networks(DNN), yolo trained model, yolo configuration and a custom dataset to detect coronaviruses.")
 
-    choice = st.radio("", ("Show Demo", "Upload and detect from image","Show mAP% and average loss","Upload and detect from video"))
+    choice = st.radio("", ("Show Demo", "Upload an image and detect coronaviruses from the image","Show mAP% and average loss","Upload a video and detect coronaviruses from video"))
     
     # choice = st.radio("", ("Browse an Image" ,"Upload video"))
     st.write()
