@@ -206,6 +206,7 @@ def object_main():
             footer {visibility: hidden;}
             </style>
             """
+    st.markdown(hide_streamlit_style,unsafe_allow_html=True)       
     # Overriding some default styles
     st.markdown("""
     <style>
