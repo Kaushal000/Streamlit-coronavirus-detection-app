@@ -1,5 +1,6 @@
 matplotlib
 numpy
+numexpr
 opencv-python-headless
 Pillow
 streamlit
