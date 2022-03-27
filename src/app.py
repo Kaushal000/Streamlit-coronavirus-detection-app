@@ -380,7 +380,7 @@ def object_main():
     # choice = st.radio("", ("Browse an Image" ,"Upload video"))
     st.write()
 
-    if choice == "Browse an Image":
+    if choice == "Upload an image and detect coronaviruses from the image":
         st.set_option('deprecation.showfileUploaderEncoding', False)
         image_file = st.file_uploader("Upload Image", type=['jpg','png','jpeg'])
 
@@ -392,7 +392,7 @@ def object_main():
                 time.sleep(5)
                 detect_objects(our_image)
      
-    elif choice== "Upload video" :
+    elif choice== "Upload a video and detect coronaviruses from video" :
         st.write()
         f=st.file_uploader("Upload Video",type='mp4')
         col1, col2, col3 = st.columns([10,20,1])
@@ -413,7 +413,7 @@ def object_main():
             with col3:
                 st.write("")
         
-    elif choice=="Show stats":
+    elif choice=="Show mAP% and average loss":
         st.title("Graph containing the average loass as well as mAP%")
         location=os.path.join(os.path.dirname( __file__ ), 'images','cov.png')
         stats_image = Image.open(location)
