@@ -6,7 +6,8 @@
 &nbsp;[![Create and publish a Docker image](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/actions/workflows/Dockerimage.yaml/badge.svg)](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/actions/workflows/Dockerimage.yaml)
 &nbsp;[![python - 3.9](https://upload.wikimedia.org/wikipedia/commons/1/1b/Blue_Python_3.9_Shield_Badge.svg)](https://www.python.org/downloads/release/python-397/)
 <br><br>[![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/repository/docker/kdocker03/streamlit-coronavirus-detection-app/general)&nbsp;[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/kaushal000/streamlit-coronavirus-detection-app/main/src/app.py)
-&nbsp;[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1KszU9b3t-T_Ia5GNjiy_uuktOnydlEID)
+&nbsp;[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1KszU9b3t-T_Ia5GNjiy_uuktOnydlEID#scrollTo=O2w9w1Ye_nk1)
+&nbsp;[![Microsoft PowerPoint](https://img.shields.io/badge/Microsoft_PowerPoint-B7472A?style=for-the-badge&logo=microsoft-powerpoint&logoColor=white)](https://1drv.ms/p/s!Asia4jQGHnLM6mzcO4j0SJydJfTD?e=UP4awf)
 
 
 A streamlit app to detect coronaviruses from gray scaled electron microscopic images as well as gray scaled video. 
@@ -25,6 +26,12 @@ A streamlit app to detect coronaviruses from gray scaled electron microscopic im
 * [Results](#results)
     - [Weghts comparisons](#comparison-of-weights-for-confidence-threshold-0.25-and-IOU-threshold-0.5-or-50%)
     - [Mean average prediction chart](#mean-average-prediction-chart-at-different-epochs-along-with-loss)
+* [Presentation](#presentation)
+* [Deployment](#deployment)
+    - [Streamlit share](#streamlit-share)
+    - [Heroku](#heroku) 
+* [Reference links](#reference-links)
+* [Citation](#citation)
 
 
 
@@ -81,7 +88,7 @@ docker run -p 8501:8501 -d streamlit-coronavirus-detection-app:latest
 ```bash
 docker pull ghcr.io/kaushal000/streamlit-coronavirus-detection-app:main
 ```
-
+**or**
 
 ```bash
 docker pull kdocker03/streamlit-coronavirus-detection-app
@@ -94,6 +101,7 @@ docker pull kdocker03/streamlit-coronavirus-detection-app
 
 ### For video :video_camera:
 ![Video](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/main/Demovideo.gif)
+<br>Sample video to test [![GD](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=393665)](https://drive.google.com/file/d/1kVfiah1S-eiRa86webkjT_fYuryulmHh/view?usp=sharing)
 
 
 
@@ -122,9 +130,9 @@ Read more about how to train custom models here [![colab](https://user-images.gi
 
 | Weights                    | Precision | Recall | F1-score | map     | TP     | FP    | FN    |   
 | :-----------------------:  | :-------: | :----: |  :----:  | :-----: | :----: | :---: | :---: |
-| `cov_yolov4_1000.weights`  | `0.87`    | `0.89` |  `0.88`  | `89.71%`|  `155` |  `23` |  `20` | 
+| `cov_yolov4_1000.weights`  | `0.87`    | `0.89` |  `0.88`  | `89.13%`|  `150` |  `40` |  `25` | 
 | `cov_yolov4_2000.weights`  | `0.93`    | `0.80` |  `0.86`  | `85.07%`|  `140` |  `11` |  `35` | 
-| `cov_yolov4_best.weights`  | `0.87`    | `0.89` |  `0.88`  | `89.71%`|  `155` |  `23` |  `20` | 
+| `cov_yolov4_best.weights`  | `0.87`    | `0.89` |  `0.88`  | `91.13%`|  `155` |  `23` |  `20` | 
 
 
 
@@ -133,3 +141,43 @@ Read more about how to train custom models here [![colab](https://user-images.gi
 ### Mean average prediction chart at different epochs along with loss
 ![MAP](https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/blob/main/map-chart/chart_cov_yolov4.png)
 
+## Presentation 
+The presentation for the entire project can be found here 👉 [![Microsoft PowerPoint](https://img.shields.io/badge/Microsoft_PowerPoint-B7472A?style=for-the-badge&logo=microsoft-powerpoint&logoColor=white)](https://1drv.ms/p/s!Asia4jQGHnLM6mzcO4j0SJydJfTD?e=UP4awf)
+
+## Deployment
+### Streamlit share
+**The app is deployed on streamlit share** [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/kaushal000/streamlit-coronavirus-detection-app/main/src/app.py)
+
+### Heroku
+**The app is also deployed on heroku using Docker image with CI/CD enabled with the help of github actions** [![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)](https://streamlit-github.herokuapp.com/)
+
+## Reference links
+<a href="https://github.com/AlexeyAB/darknet" target="_blank">AlexeyAB/darknet</a>
+
+Yolov4 paper 👉 [![arxiv.org](http://img.shields.io/badge/cs.CV-arXiv%3A2004.10934-B31B1B.svg)](https://arxiv.org/abs/2004.10934)
+Scaled Yolov4 paper 👉 [![arxiv.org](http://img.shields.io/badge/cs.CV-arXiv%3A2011.08036-B31B1B.svg)](https://arxiv.org/abs/2011.08036)
+
+<a href="https://baike.baidu.com/item/2019" target="_blank">Image, B.: The electron microscopic image of SARS-CoV-2</a> 
+
+## Citation 
+```
+@misc{bochkovskiy2020yolov4,
+      title={YOLOv4: Optimal Speed and Accuracy of Object Detection}, 
+      author={Alexey Bochkovskiy and Chien-Yao Wang and Hong-Yuan Mark Liao},
+      year={2020},
+      eprint={2004.10934},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
+
+```
+@InProceedings{Wang_2021_CVPR,
+    author    = {Wang, Chien-Yao and Bochkovskiy, Alexey and Liao, Hong-Yuan Mark},
+    title     = {{Scaled-YOLOv4}: Scaling Cross Stage Partial Network},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2021},
+    pages     = {13029-13038}
+}
+```
