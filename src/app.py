@@ -6,7 +6,7 @@ from video import getvideo
 from modelDownloader import downloader
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 from PIL import Image
 import tempfile
 
@@ -32,11 +32,11 @@ def detect_objects(our_image):
     class_colors = np.array(class_colors)
     class_colors = np.tile(class_colors,(1,1))
 
-    cfgpath=os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'src\model','cov_yolov4.cfg'))
-    modelpath=os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'src\model','cov_yolov4_best.weights'))
+    cfgpath=os.path.join(os.path.dirname( __file__ ),'model','cov_yolov4.cfg')
+    modelpath=os.path.join(os.path.dirname( __file__ ),'model','cov_yolov4_best.weights')
 
     if not os.path.exists(modelpath):
-        loc=os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'src\model'))
+        loc=os.path.join(os.path.dirname( __file__ ),'model')
         d=downloader()
         
         with st.spinner('Downloading weights...'):
@@ -167,10 +167,9 @@ def detect_objects(our_image):
 def object_main():
     """OBJECT DETECTION APP"""
     #Favicon
-    favpath=os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'src\images','icons8-coronavirus-16.png'))
+    favpath=os.path.join(os.path.dirname( __file__ ),'images','icons8-coronavirus-16.png')
     img1=Image.open(favpath)
     
-    path=os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..', 'src\images','coronavirus.jpg'))
     
     
     #st.set_page_config(layout='wide')
@@ -397,6 +396,7 @@ def object_main():
        
 
     else :
+        path=os.path.join(os.path.dirname( __file__ ),'images','coronavirus.jpg')
         our_image = Image.open(path)
         detect_objects(our_image)
 # embed streamlit docs in a streamlit app
