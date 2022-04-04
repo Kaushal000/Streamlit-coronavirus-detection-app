@@ -11,7 +11,7 @@ from PIL import Image
 import tempfile
 
 
-def detect_objects(our_image):
+def detect_objects(our_image,score_threshold,nms_threshold):
     
     # st.set_option('deprecation.showPyplotGlobalUse', False)
 
@@ -102,8 +102,7 @@ def detect_objects(our_image):
     ############## NMS Change 3 ###############
     # Applying the NMS will return only the selected max value ids while suppressing the non maximum (weak) overlapping bounding boxes      
     # Non-Maxima Suppression confidence set as 0.5 & max_suppression threhold for NMS as 0.4 (adjust and try for better perfomance)
-    score_threshold = st.sidebar.slider("Confidence Threshold", 0.00,1.00,0.5,0.01)
-    nms_threshold = st.sidebar.slider("NMS Threshold", 0.00, 1.00, 0.4, 0.01)
+   
     
     max_value_ids = cv2.dnn.NMSBoxes(boxes_list, confidences_list,score_threshold,nms_threshold )
 
@@ -354,6 +353,9 @@ def object_main():
   
     st.title("Object Detection")
     st.write("Object detection is a central algorithm in computer vision. The algorithm implemented below is YOLO (You Only Look Once), a state-of-the-art algorithm trained to identify thousands of objects types. It extracts objects from images and identifies them using OpenCV and Yolo. This task involves Deep Neural Networks(DNN), yolo trained model, yolo configuration and a dataset to detect objects.")
+
+    score_threshold = st.sidebar.slider("Confidence Threshold", 0.00,1.00,0.5,0.01)
+    nms_threshold = st.sidebar.slider("NMS Threshold", 0.00, 1.00, 0.4, 0.01)
 
     choice = st.radio("", ("Show Demo", "Browse an Image" ,"Upload video"))
     st.write()
