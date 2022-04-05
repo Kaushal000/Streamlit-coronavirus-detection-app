@@ -147,11 +147,11 @@ def detect_objects(our_image,score_threshold,nms_threshold):
         
     with col1:
         st.header("Original image")
-        st.image(our_image,use_column_width='never')
+        st.image(our_image,use_column_width='always')
 
     with col2:
         st.header("Detected objects in the image")
-        st.image(img,use_column_width='never')
+        st.image(img,use_column_width='always')
 
         
         
