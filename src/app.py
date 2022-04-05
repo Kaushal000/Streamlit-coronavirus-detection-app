@@ -380,7 +380,7 @@ def object_main():
         elif choice== "Upload video and detect coronaviruses form video" :
             st.write()
             f=st.file_uploader("Upload Video",type='mp4')
-            col1, col2, col3 = st.columns([10,20,1])
+            col1, col2, col3 = st.columns([5,20,1])
 
             
             
