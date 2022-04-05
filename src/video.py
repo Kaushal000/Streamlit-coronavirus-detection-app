@@ -18,8 +18,14 @@ def getvideo(name):
         st.session_state.key = 'Detecting confidences'
     
     class_labels = ["corona_virus"]
+    parentdir=os.path.dirname(__file__)
+    childdir='videos'
+    videopath=os.path.join(parentdir,childdir)
+    mode=0o777
+    os.mkdir(videopath,mode)
+    videopath=os.path.join(parentdir,childdir,'result.mp4')
 
-    videopath=os.path.join(os.path.dirname( __file__ ),'video','result.mp4')
+
     cfgpath=os.path.join(os.path.dirname( __file__ ),'model','cov_yolov4.cfg')
     modelpath=os.path.join(os.path.dirname( __file__ ),'model','cov_yolov4_best.weights')
 
@@ -195,7 +201,7 @@ def getvideo(name):
             writer.release()
             stframe.empty()        
         
-        videopath=os.path.join(os.path.dirname( __file__ ),'video','result.mp4')
+        # videopath=os.path.join(os.path.dirname( __file__ ),'video','result.mp4')
         video_file=open(videopath,'rb')
         video_bytes = video_file.read()
         st.video(video_bytes)
