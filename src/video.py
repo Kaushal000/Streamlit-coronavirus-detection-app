@@ -24,7 +24,7 @@ def getvideo(name):
     if not os.path.exists(videopath):
         mode=0o777
         os.mkdir(videopath,mode)
-    vid=os.path.join(parentdir,childdir,'result.mp4')
+    vid=os.path.join(videopath,'result.mp4')
 
 
     cfgpath=os.path.join(os.path.dirname( __file__ ),'model','cov_yolov4.cfg')
