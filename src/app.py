@@ -353,7 +353,7 @@ def object_main():
 	</nav>""",unsafe_allow_html=True)
 
     st.title("Coronavirus detection app")
-    opt=st.sidebar.radio("Choose what to do",("Run the app","View documentation","View source code"))
+    opt=st.sidebar.radio("Choose what to do",("Run the app","View documentation","View source code","Show mAP% score"))
     
     if opt=="Run the app":
         st.header("Object Detection")
@@ -413,11 +413,47 @@ def object_main():
             content=requests.get('https://raw.githubusercontent.com/Kaushal000/Streamlit-coronavirus-detection-app/main/README.md').text
             st.markdown(content,unsafe_allow_html=True)
 
-    else:
+    elif opt=="View source code":
         pth=os.path.join(os.path.dirname( __file__ ),'app.py')
         p=Path(pth).read_text()
         st.code(p,language='python')
 
+    else:
+        col1,col2,col3=st.columns([11,20,10])
+        st.markdown("""
+            <style>
+            .Red{
+                color:red;    
+            } 
+            .Blue{
+                color:blue;       
+            }
+            </style>
+            """,unsafe_allow_html=True)
+
+
+        with col1:
+             st.markdown("""<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <div>
+                <strong>The <span class="Blue">blue</span>&nbsp;line indicates average loss percentage</strong>&nbsp;👉
+                </div>
+               """,unsafe_allow_html=True)    
+        
+        with col2:
+            p=os.path.join(os.path.dirname(__file__),'images','cov.png')
+            chart=Image.open(p)
+            st.image(chart,use_column_width='auto')
+
+        with col3:
+          st.markdown(
+                """<br><br><br><br>
+                <div>
+                👈&nbsp;<strong>The <span class="Red">red</span>&nbsp;line indicates mAP% score</strong>
+                </div>
+                <br><br><br><br>
+                """,unsafe_allow_html=True)
+
+           
 
 if __name__ == '__main__':
     object_main()
