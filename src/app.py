@@ -352,6 +352,13 @@ def object_main():
 		<div class="nav-underline2"></div>
 	</nav>""",unsafe_allow_html=True)
 
+    st.markdown("[![GitHub][github_badge]][github_link]")
+    st.markdown("""
+    [github_badge]: https://badgen.net/badge/icon/GitHub?icon=github&color=black&label
+    [github_link]: https://github.com/Kaushal000/Streamlit-coronavirus-detection-app
+    """)
+
+
     st.title("Coronavirus detection app")
     opt=st.sidebar.radio("Choose what to do",("Run the app","View documentation","View source code","Show mAP% score"))
     
