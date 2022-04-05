@@ -9,6 +9,8 @@ import numpy as np
 # import matplotlib.pyplot as plt
 from PIL import Image
 import tempfile
+import requests
+from pathlib import Path
 
 
 def detect_objects(our_image,score_threshold,nms_threshold):
@@ -350,58 +352,70 @@ def object_main():
 		<div class="nav-underline2"></div>
 	</nav>""",unsafe_allow_html=True)
 
-  
-    st.title("Object Detection")
-    st.write("Object detection is a central algorithm in computer vision. The algorithm implemented below is YOLO (You Only Look Once), a state-of-the-art algorithm trained to identify thousands of objects types. It extracts objects from images and identifies them using OpenCV and Yolo. This task involves Deep Neural Networks(DNN), yolo trained model, yolo configuration and a dataset to detect objects.")
+    opt=st.sidebar.radio("Choose what to do",("Run the app","View documentation","View source code"))
+    
+    if opt=="Run the app":
+        st.title("Object Detection")
+        st.write("Object detection is a central algorithm in computer vision. The algorithm implemented below is YOLO (You Only Look Once), a state-of-the-art algorithm trained to identify thousands of objects types. It extracts objects from images and identifies them using OpenCV and Yolo. This task involves Deep Neural Networks(DNN), yolo trained model, yolo configuration and a dataset to detect objects.")
 
-    score_threshold = st.sidebar.slider("Confidence Threshold", 0.00,1.00,0.5,0.01)
-    nms_threshold = st.sidebar.slider("NMS Threshold", 0.00, 1.00, 0.4, 0.01)
+        score_threshold = st.sidebar.slider("Confidence Threshold", 0.00,1.00,0.5,0.01)
+        nms_threshold = st.sidebar.slider("NMS Threshold", 0.00, 1.00, 0.4, 0.01)
 
-    choice = st.radio("", ("Show Demo", "Browse an Image" ,"Upload video"))
-    st.write()
-
-    if choice == "Browse an Image":
-        st.set_option('deprecation.showfileUploaderEncoding', False)
-        image_file = st.file_uploader("Upload Image", type=['jpg','png','jpeg'])
-
-        if image_file is not None:
-            our_image = Image.open(image_file)  
-            st.info('Image uploaded')
-            
-            with st.spinner('Detecting objects and generating confidence scores...'):
-                time.sleep(5)
-                detect_objects(our_image)
-     
-    elif choice== "Upload video" :
+        choice = st.radio("", ("Show Demo", "Browse an Image" ,"Upload video"))
         st.write()
-        f=st.file_uploader("Upload Video",type='mp4')
-        col1, col2, col3 = st.columns([10,20,1])
+
+        if choice == "Browse an Image":
+            st.set_option('deprecation.showfileUploaderEncoding', False)
+            image_file = st.file_uploader("Upload Image", type=['jpg','png','jpeg'])
+
+            if image_file is not None:
+                our_image = Image.open(image_file)  
+                st.info('Image uploaded')
+                
+                with st.spinner('Detecting objects and generating confidence scores...'):
+                    time.sleep(5)
+                    detect_objects(our_image)
+        
+        elif choice== "Upload video" :
+            st.write()
+            f=st.file_uploader("Upload Video",type='mp4')
+            col1, col2, col3 = st.columns([10,20,1])
+
+            
+            
+            if f is not None:
+                tfile = tempfile.NamedTemporaryFile(delete=False) 
+                tfile.write(f.read())
+
+                nm=tfile.name
+                with col1:
+                    st.write("")
+
+                with col2:
+                    getvideo(nm)
+
+                with col3:
+                    st.write("")
+            
+
 
         
-        
-        if f is not None:
-            tfile = tempfile.NamedTemporaryFile(delete=False) 
-            tfile.write(f.read())
 
-            nm=tfile.name
-            with col1:
-                st.write("")
+        else :
+            path=os.path.join(os.path.dirname( __file__ ),'images','coronavirus.jpg')
+            our_image = Image.open(path)
+            detect_objects(our_image,score_threshold,nms_threshold)
+    # embed streamlit docs in a streamlit app
+    elif opt=="View documentation":
+        with st.spinner('Fetching documentation from github..'):
+            time.sleep(5)
+            content=requests.get('https://raw.githubusercontent.com/Kaushal000/Streamlit-coronavirus-detection-app/main/README.md').text
+            st.markdown(content,unsafe_allow_html=True)
 
-            with col2:
-                getvideo(nm)
-
-            with col3:
-                st.write("")
-        
-
-
-       
-
-    else :
-        path=os.path.join(os.path.dirname( __file__ ),'images','coronavirus.jpg')
-        our_image = Image.open(path)
-        detect_objects(our_image)
-# embed streamlit docs in a streamlit app
+    else:
+        pth=os.path.join(os.path.dirname( __file__ ),'app.py')
+        p=Path(pth).read_text()
+        st.code(p,language='python')
 
 
 if __name__ == '__main__':
