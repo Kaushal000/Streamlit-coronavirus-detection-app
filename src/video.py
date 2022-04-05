@@ -24,7 +24,7 @@ def getvideo(name):
     if not os.path.exists(videopath):
         mode=0o777
         os.mkdir(videopath,mode)
-    vid=os.path.join(videopath,'result.mp4')
+    vid=os.path.join(videopath,'result.webm')
 
 
     cfgpath=os.path.join(os.path.dirname( __file__ ),'model','cov_yolov4.cfg')
@@ -177,7 +177,8 @@ def getvideo(name):
             # Constructing code of the codec
             # to be used in the function VideoWriter
                 # fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-                fourcc = cv2.VideoWriter_fourcc(*'H264')
+                fourcc = cv2.VideoWriter_fourcc('V','P','8','0')
+                
                 # fourcc = 0x00000021
                 # fourcc = cv2.VideoWriter_fourcc(*'vp80')
 
@@ -186,8 +187,7 @@ def getvideo(name):
                 # r'videos\result-traffic-cars.mp4'
                 # or:
                 # 'videos\\result-traffic-cars.mp4'
-                writer = cv2.VideoWriter(vid, fourcc, 30,
-                                        (frame.shape[1], frame.shape[0]), True)
+                writer = cv2.VideoWriter(vid, fourcc, 20,(frame.shape[1], frame.shape[0]), True)
 
         # Write processed current frame to the file
             writer.write(frame)
