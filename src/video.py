@@ -185,7 +185,7 @@ def getvideo(name):
                 # r'videos\result-traffic-cars.mp4'
                 # or:
                 # 'videos\\result-traffic-cars.mp4'
-                writer = cv2.VideoWriter(videopath, fourcc, 30,
+                writer = cv2.VideoWriter(vid, fourcc, 30,
                                         (frame.shape[1], frame.shape[0]), True)
 
         # Write processed current frame to the file
