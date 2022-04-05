@@ -21,9 +21,10 @@ def getvideo(name):
     parentdir=os.path.dirname(__file__)
     childdir='videos'
     videopath=os.path.join(parentdir,childdir)
-    mode=0o777
-    os.mkdir(videopath,mode)
-    videopath=os.path.join(parentdir,childdir,'result.mp4')
+    if not os.path.exists(videopath):
+        mode=0o777
+        os.mkdir(videopath,mode)
+    vid=os.path.join(parentdir,childdir,'result.mp4')
 
 
     cfgpath=os.path.join(os.path.dirname( __file__ ),'model','cov_yolov4.cfg')
@@ -202,7 +203,8 @@ def getvideo(name):
             stframe.empty()        
         
         # videopath=os.path.join(os.path.dirname( __file__ ),'video','result.mp4')
-        video_file=open(videopath,'rb')
+        print(os.listdir(videopath))
+        video_file=open(vid,'rb')
         video_bytes = video_file.read()
         st.video(video_bytes)
         st.success(f'Total number of frames: {f}')
