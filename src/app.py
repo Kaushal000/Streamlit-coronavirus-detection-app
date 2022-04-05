@@ -393,7 +393,7 @@ def object_main():
                     st.write("")
 
                 with col2:
-                    getvideo(nm)
+                    getvideo(nm,score_threshold,nms_threshold)
 
                 with col3:
                     st.write("")

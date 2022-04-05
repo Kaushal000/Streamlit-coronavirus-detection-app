@@ -6,7 +6,7 @@ import tempfile
 import time
 from modelDownloader import downloader
 
-def getvideo(name):
+def getvideo(name,score_threshold,nms_threshold):
     #st.markdown('')
   
     vf = cv2.VideoCapture(name)
@@ -135,7 +135,7 @@ def getvideo(name):
         ############## NMS Change 3 ###############
         # Applying the NMS will return only the selected max value ids while suppressing the non maximum (weak) overlapping bounding boxes      
         # Non-Maxima Suppression confidence set as 0.5 & max_suppression threhold for NMS as 0.4 (adjust and try for better perfomance)
-        max_value_ids = cv2.dnn.NMSBoxes(boxes_list, confidences_list,0.5,0.4)
+        max_value_ids = cv2.dnn.NMSBoxes(boxes_list, confidences_list,score_threshold,nms_threshold)
         
         # loop through the final set of detections remaining after NMS and draw bounding box and write text
         for max_valueid in max_value_ids:
@@ -176,7 +176,7 @@ def getvideo(name):
             #gray = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         
                 
-        stframe.image(frame,use_column_width='yes')
+        stframe.image(frame)
 
         if writer is None:
         # Constructing code of the codec
@@ -226,7 +226,7 @@ def object_main():
 
         nm=tfile.name
         
-        getvideo(nm)
+        getvideo(nm,0.5,0.4)
         
 if __name__ == '__main__':
     object_main()
