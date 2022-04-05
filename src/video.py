@@ -58,7 +58,7 @@ def getvideo(name,score_threshold,nms_threshold):
         ret, frame = vf.read()
         # if frame is read correctly ret is True
         if not ret:
-            print("Can't receive frame (stream end?). Exiting ...")
+            # print("Can't receive frame (stream end?). Exiting ...")
             break
         
             # Slicing from tuple only first two elements
@@ -74,7 +74,7 @@ def getvideo(name,score_threshold,nms_threshold):
         # Calculating at the same time, needed time for forward pass
         network.setInput(blob)  # setting blob as input to the network
         
-        with st.spinner("Detecting from frames and writing down the individual detected frames to video"):
+        with st.spinner("Detecting from frames,drawing bounding boxes around the detected objects and writing down the individual labelled frames to video"):
             start = time.time()
             output_from_network = network.forward(layers_names_output)
             end = time.time()
@@ -187,11 +187,11 @@ def getvideo(name,score_threshold,nms_threshold):
         
     stinfo.info("End of video. Writing the detected frames and showing the resultant video...")
     writer.release()
-    stinfo.empty()
     stframe.empty()                
     
-    with st.spinner("Optimizing and encoding the video for web compability"):
+    with st.spinner("Optimizing and encoding the resultant video for web compability"):
         time.sleep(5)
+        stinfo.empty()
         video_file = open(videopath, 'rb')
         video_bytes = video_file.read()
 
