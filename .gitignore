@@ -14,6 +14,7 @@ cov_yolov4_best.weights
 cov_yolov4_best.weights
 Test-video
 result.mp4
+videos
 
 # C extensions
 *.so
