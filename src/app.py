@@ -215,7 +215,7 @@ def object_main():
         display: block;
         width: 20%;
         padding: .65rem 0;
-        color: #dc3545;
+        color:rgb(255, 75, 75);
         text-decoration: none;
         text-align: center;
         text-transform: uppercase;
@@ -453,6 +453,20 @@ def object_main():
                 <br><br><br><br>
                 """,unsafe_allow_html=True)
 
-           
+
+
+    st.sidebar.markdown(
+        """<br><br>
+        <style>
+        .center {
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+            color: rgb(255, 75, 75);
+            }
+        </style>
+        <h3 class="center">Presentation</h3>
+        <iframe src="https://onedrive.live.com/embed?resid=CC721E0634E29AC8%2113676&amp;authkey=%21AJqlhggJ3vIp8MA&amp;em=2&amp;wdAr=1.7777777777777777" width="300px" height="263px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a></iframe>
+        """,unsafe_allow_html=True)       
 if __name__ == '__main__':
     object_main()
