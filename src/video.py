@@ -14,8 +14,8 @@ def getvideo(name):
     writer=None
 
   
-    # if 'key' not in st.session_state:
-    #     st.session_state.key = 'Detecting confidences'
+    if 'key' not in st.session_state:
+        st.session_state.key = 'Detecting confidences'
     
     class_labels = ["corona_virus"]
     parentdir=os.path.dirname(__file__)
