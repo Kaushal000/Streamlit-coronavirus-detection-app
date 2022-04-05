@@ -194,14 +194,15 @@ def getvideo(name):
             time.sleep(5)
             stinfo.empty()
         
-        with open(videopath, 'rb') as video_file:
-            video_bytes = video_file.read()
-            st.video(video_bytes)
-            st.success(f'Total number of frames: {f}')
-            st.success('Total amount of time {:.5f} seconds'.format(t))
-            fps=round((f/t),1)
-            st.success(f'FPS:{fps}')
-
+        videopath=os.path.join(os.path.dirname( __file__ ),'video','result.mp4')
+        video_file=open(videopath,'rb')
+        video_bytes = video_file.read()
+        st.video(video_bytes)
+        st.success(f'Total number of frames: {f}')
+        st.success('Total amount of time {:.5f} seconds'.format(t))
+        fps=round((f/t),1)
+        st.success(f'FPS:{fps}')
+       
 def object_main():
     f = st.file_uploader("Upload file")
     if f is not None:
