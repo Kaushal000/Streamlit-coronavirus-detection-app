@@ -147,11 +147,11 @@ def detect_objects(our_image,score_threshold,nms_threshold):
         
     with col1:
         st.header("Original image")
-        st.image(our_image,width=15,use_column_width='auto')
+        st.image(our_image,use_column_width='auto')
 
     with col2:
         st.header("Detected objects in the image")
-        st.image(img,width=15,use_column_width='auto')
+        st.image(img,use_column_width='auto')
 
         
         
@@ -352,19 +352,20 @@ def object_main():
 		<div class="nav-underline2"></div>
 	</nav>""",unsafe_allow_html=True)
 
+    st.title("Coronavirus detection app")
     opt=st.sidebar.radio("Choose what to do",("Run the app","View documentation","View source code"))
     
     if opt=="Run the app":
-        st.title("Object Detection")
+        st.header("Object Detection")
         st.write("Object detection is a central algorithm in computer vision. The algorithm implemented below is YOLO (You Only Look Once), a state-of-the-art algorithm trained to identify thousands of objects types. It extracts objects from images and identifies them using OpenCV and Yolo. This task involves Deep Neural Networks(DNN), yolo trained model, yolo configuration and a dataset to detect objects.")
 
         score_threshold = st.sidebar.slider("Confidence Threshold", 0.00,1.00,0.5,0.01)
         nms_threshold = st.sidebar.slider("NMS Threshold", 0.00, 1.00, 0.4, 0.01)
 
-        choice = st.radio("", ("Show Demo", "Browse an Image" ,"Upload video"))
+        choice = st.radio("", ("Show Demo", "Upload image and detect coronaviruses from image" ,"Upload video and detect coronaviruses form video"))
         st.write()
 
-        if choice == "Browse an Image":
+        if choice == "Upload image and detect coronaviruses from image":
             st.set_option('deprecation.showfileUploaderEncoding', False)
             image_file = st.file_uploader("Upload Image", type=['jpg','png','jpeg'])
 
@@ -374,9 +375,9 @@ def object_main():
                 
                 with st.spinner('Detecting objects and generating confidence scores...'):
                     time.sleep(5)
-                    detect_objects(our_image)
+                    detect_objects(our_image,score_threshold,nms_threshold)
         
-        elif choice== "Upload video" :
+        elif choice== "Upload video and detect coronaviruses form video" :
             st.write()
             f=st.file_uploader("Upload Video",type='mp4')
             col1, col2, col3 = st.columns([10,20,1])

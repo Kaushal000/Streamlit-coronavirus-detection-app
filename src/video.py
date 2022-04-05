@@ -211,7 +211,7 @@ def object_main():
 
         nm=tfile.name
         
-        getvideo(nm)
+        getvideo(nm,0.5,0.4)
         
 if __name__ == '__main__':
     object_main()
