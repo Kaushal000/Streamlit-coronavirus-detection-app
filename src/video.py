@@ -187,12 +187,13 @@ def getvideo(name):
         
     if not ret:
         stinfo.info("End of video. Writing the detected frames and showing the resultant video...")
-        writer.release()
-        stframe.empty()                
+                      
         
         with st.spinner("Optimizing and encoding the resultant video for web compability"):
             time.sleep(5)
             stinfo.empty()
+            writer.release()
+            stframe.empty()        
         
         videopath=os.path.join(os.path.dirname( __file__ ),'video','result.mp4')
         video_file=open(videopath,'rb')
