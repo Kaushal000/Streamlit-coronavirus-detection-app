@@ -192,15 +192,14 @@ def getvideo(name):
     with st.spinner("Optimizing and encoding the resultant video for web compability"):
         time.sleep(5)
         stinfo.empty()
-        video_file = open(videopath, 'rb')
+       
+    with open(videopath, 'rb') as video_file:
         video_bytes = video_file.read()
-
-
-    st.video(video_bytes)
-    st.success(f'Total number of frames: {f}')
-    st.success('Total amount of time {:.5f} seconds'.format(t))
-    fps=round((f/t),1)
-    st.success(f'FPS:{fps}')
+        st.video(video_bytes)
+        st.success(f'Total number of frames: {f}')
+        st.success('Total amount of time {:.5f} seconds'.format(t))
+        fps=round((f/t),1)
+        st.success(f'FPS:{fps}')
 
 def object_main():
     f = st.file_uploader("Upload file")
