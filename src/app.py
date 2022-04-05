@@ -344,11 +344,11 @@ def object_main():
     st.markdown("""
     <nav class="navbar">
 		<a href="#">Home</a>
-		<a href="#">Menu</a>
+		<a href="https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/wiki" target="_blank">WIKI</a>
 		<a href="#" class="current">Gallery</a>
-		<a href="#">About</a>
-		<a href="#">Contact</a>
-		<div class="nav-underline"></div>
+		<a href="https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/tree/main/src" target="_blank">Source</a>
+        <a href="#">About</a>
+	    <div class="nav-underline"></div>
 		<div class="nav-underline2"></div>
 	</nav>""",unsafe_allow_html=True)
 
