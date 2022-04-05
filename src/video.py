@@ -176,8 +176,8 @@ def getvideo(name):
             if writer is None:
             # Constructing code of the codec
             # to be used in the function VideoWriter
-            # fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-                fourcc = 0x00000021
+                fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+                # fourcc = 0x00000021
                 # fourcc = cv2.VideoWriter_fourcc(*'vp80')
 
                 # Writing current processed frame into the video file
