@@ -345,9 +345,9 @@ def object_main():
     <nav class="navbar">
 		<a href="#">Home</a>
 		<a href="https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/wiki" target="_blank">WIKI</a>
-		<a href="#" class="current">Gallery</a>
+		<a href="#" class="current">Thesis</a>
 		<a href="https://github.com/Kaushal000/Streamlit-coronavirus-detection-app/tree/main/src" target="_blank">Source</a>
-        <a href="#">About</a>
+        <a href="https://colab.research.google.com/drive/1KszU9b3t-T_Ia5GNjiy_uuktOnydlEID#scrollTo=O2w9w1Ye_nk1" target="_blank">Train</a>
 	    <div class="nav-underline"></div>
 		<div class="nav-underline2"></div>
 	</nav>""",unsafe_allow_html=True)
