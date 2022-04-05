@@ -357,7 +357,7 @@ def object_main():
     
     [github_badge]: https://badgen.net/badge/icon/GitHub?icon=github&color=black&label
     
-    [github_link]: https://github.com/okld/streamlit-gallery
+    [github_link]: https://github.com/Kaushal000/Streamlit-coronavirus-detection-app
     
     """
 
