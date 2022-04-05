@@ -352,11 +352,12 @@ def object_main():
 		<div class="nav-underline2"></div>
 	</nav>""",unsafe_allow_html=True)
 
-    st.markdown("[![GitHub][github_badge]][github_link]")
-    st.markdown("""
+    st.markdown(
+    """
+    ![GitHub][github_badge]][github_link]
     [github_badge]: https://badgen.net/badge/icon/GitHub?icon=github&color=black&label
     [github_link]: https://github.com/Kaushal000/Streamlit-coronavirus-detection-app
-    """)
+    """,unsafe_allow_html=True)
 
 
     st.title("Coronavirus detection app")
